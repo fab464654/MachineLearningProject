@@ -1,0 +1,539 @@
+C:\Users\fabio\anaconda3\envs\ML_Project\python.exe C:/Users/fabio/PycharmProjects/ML_Project/KNN/my_knn_classifier_main.py
+Reading training images...
+[INFO] processed 1000/14034
+[INFO] processed 2000/14034
+[INFO] processed 3000/14034
+[INFO] processed 4000/14034
+[INFO] processed 5000/14034
+[INFO] processed 6000/14034
+[INFO] processed 7000/14034
+[INFO] processed 8000/14034
+[INFO] processed 9000/14034
+[INFO] processed 10000/14034
+[INFO] processed 11000/14034
+[INFO] processed 12000/14034
+[INFO] processed 13000/14034
+[INFO] processed 14000/14034
+Finished reading training images.
+Reading test images...
+[INFO] processed 1000/3000
+[INFO] processed 2000/3000
+Finished test training images.
+
+Running Principal Component Analysis algorithm to reduce data dimensionality (on pixel features)...
+[PCA tuning] Perfoming PCA tuning of the goal variance hyperparameter....
+[PCA tuning] Considering variance=0.6
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.6 explained variance is 9
+[myPCA] Classifier accuracy: 44.13%
+
+[PCA tuning] Considering variance=0.65
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.65 explained variance is 15
+[myPCA] Classifier accuracy: 47.93%
+
+[PCA tuning] Considering variance=0.7
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 26
+[myPCA] Classifier accuracy: 49.93%
+
+[PCA tuning] Considering variance=0.75
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.75 explained variance is 49
+[myPCA] Classifier accuracy: 50.17%
+
+[PCA tuning] Considering variance=0.8
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.8 explained variance is 98
+[myPCA] Classifier accuracy: 48.23%
+
+[PCA tuning] Considering variance=0.85
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.85 explained variance is 191
+[myPCA] Classifier accuracy: 47.17%
+
+[PCA tuning] Considering variance=0.9
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 353
+[myPCA] Classifier accuracy: 44.53%
+
+[PCA tuning] The best goal variance found was 0.75 with an accuracy of 50.17% (49 components were considered)
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.75 explained variance is 49
+[myPCA] Classifier accuracy: 50.17%
+
+Comparing (but not using) with sklearn PCA results...
+[sklearn PCA] PCA components considering the set variance ratio (0.75): 31
+
+Running Principal Component Analysis algorithm to reduce data dimensionality (on histogram features)...
+[PCA tuning] Perfoming PCA tuning of the goal variance hyperparameter....
+[PCA tuning] Considering variance=0.6
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.6 explained variance is 6
+[myPCA] Classifier accuracy: 34.70%
+
+[PCA tuning] Considering variance=0.65
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.65 explained variance is 7
+[myPCA] Classifier accuracy: 35.53%
+
+[PCA tuning] Considering variance=0.7
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 10
+[myPCA] Classifier accuracy: 40.60%
+
+[PCA tuning] Considering variance=0.75
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.75 explained variance is 14
+[myPCA] Classifier accuracy: 42.90%
+
+[PCA tuning] Considering variance=0.8
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.8 explained variance is 19
+[myPCA] Classifier accuracy: 43.43%
+
+[PCA tuning] Considering variance=0.85
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.85 explained variance is 28
+[myPCA] Classifier accuracy: 44.17%
+
+[PCA tuning] Considering variance=0.9
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 44
+[myPCA] Classifier accuracy: 43.97%
+
+[PCA tuning] The best goal variance found was 0.85 with an accuracy of 44.17% (28 components were considered)
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.85 explained variance is 28
+[myPCA] Classifier accuracy: 44.17%
+
+Comparing (but not using) with sklearn PCA results...
+[sklearn PCA] PCA components considering the set variance ratio (0.85): 20
+
+------------------------------------------------------------
+[KNN pixels tuning] Considering 10000 samples for training and 3000 for testing
+[KNN tuning] Considering euclidean distance metric and K=1...   | Achieved accuracy: 44.93% |
+[KNN tuning] Considering cosine distance metric and K=1...   | Achieved accuracy: 47.17% |
+[KNN tuning] Considering jaccard distance metric and K=1...   | Achieved accuracy: 18.43% |
+[KNN tuning] Considering mahalanobis distance metric and K=1...   | Achieved accuracy: 36.97% |
+[KNN tuning] Considering euclidean distance metric and K=3...   | Achieved accuracy: 47.17% |
+[KNN tuning] Considering cosine distance metric and K=3...   | Achieved accuracy: 48.13% |
+[KNN tuning] Considering jaccard distance metric and K=3...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=3...   | Achieved accuracy: 38.27% |
+[KNN tuning] Considering euclidean distance metric and K=5...   | Achieved accuracy: 47.77% |
+[KNN tuning] Considering cosine distance metric and K=5...   | Achieved accuracy: 49.90% |
+[KNN tuning] Considering jaccard distance metric and K=5...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=5...   | Achieved accuracy: 39.50% |
+[KNN tuning] Considering euclidean distance metric and K=7...   | Achieved accuracy: 48.60% |
+[KNN tuning] Considering cosine distance metric and K=7...   | Achieved accuracy: 50.90% |
+[KNN tuning] Considering jaccard distance metric and K=7...   | Achieved accuracy: 16.70% |
+[KNN tuning] Considering mahalanobis distance metric and K=7...   | Achieved accuracy: 39.57% |
+[KNN pixels tuning] The best hyperparameters found are: K=7; metric distance=cosine
+------------------------------------------------------------
+
+------------------------------------------------------------
+[KNN histograms tuning] Considering 10000 samples for training and 3000 for testing
+[KNN tuning] Considering euclidean distance metric and K=1...   | Achieved accuracy: 17.57% |
+[KNN tuning] Considering cosine distance metric and K=1...   | Achieved accuracy: 16.10% |
+[KNN tuning] Considering jaccard distance metric and K=1...   | Achieved accuracy: 17.00% |
+[KNN tuning] Considering mahalanobis distance metric and K=1...   | Achieved accuracy: 18.60% |
+[KNN tuning] Considering euclidean distance metric and K=3...   | Achieved accuracy: 18.03% |
+[KNN tuning] Considering cosine distance metric and K=3...   | Achieved accuracy: 17.23% |
+[KNN tuning] Considering jaccard distance metric and K=3...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=3...   | Achieved accuracy: 20.50% |
+[KNN tuning] Considering euclidean distance metric and K=5...   | Achieved accuracy: 18.20% |
+[KNN tuning] Considering cosine distance metric and K=5...   | Achieved accuracy: 18.13% |
+[KNN tuning] Considering jaccard distance metric and K=5...   | Achieved accuracy: 17.50% |
+[KNN tuning] Considering mahalanobis distance metric and K=5...   | Achieved accuracy: 21.77% |
+[KNN tuning] Considering euclidean distance metric and K=7...   | Achieved accuracy: 17.80% |
+[KNN tuning] Considering cosine distance metric and K=7...   | Achieved accuracy: 17.87% |
+[KNN tuning] Considering jaccard distance metric and K=7...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=7...   | Achieved accuracy: 21.40% |
+[KNN histograms tuning] The best hyperparameters found are: K=5; metric distance=mahalanobis
+------------------------------------------------------------
+
+[my KNN] Considering rawPixels_RGB pixels features...   | Achieved accuracy: 50.60% |
+[my KNN] Classification Report:
+               precision    recall  f1-score   support
+
+   buildings       0.42      0.27      0.33       437
+      forest       0.60      0.81      0.69       474
+     glacier       0.51      0.53      0.52       553
+    mountain       0.44      0.72      0.54       525
+         sea       0.43      0.25      0.32       510
+      street       0.63      0.45      0.52       501
+
+    accuracy                           0.51      3000
+   macro avg       0.50      0.50      0.49      3000
+weighted avg       0.51      0.51      0.49      3000
+
+precision = 0.505
+recall = 0.502
+fscore = 0.486
+support = None
+
+(3000,) (1, 3000)
+[my KNN] Considering histograms_RGB as features...   | Achieved accuracy: 20.93% |
+[my KNN] Classification Report:
+               precision    recall  f1-score   support
+
+   buildings       0.17      0.26      0.20       437
+      forest       0.37      0.48      0.42       474
+     glacier       0.15      0.12      0.13       553
+    mountain       0.22      0.15      0.18       525
+         sea       0.23      0.15      0.19       510
+      street       0.12      0.13      0.12       501
+
+    accuracy                           0.21      3000
+   macro avg       0.21      0.22      0.21      3000
+weighted avg       0.21      0.21      0.20      3000
+
+precision = 0.209
+recall = 0.215
+fscore = 0.206
+support = None
+
+Reading training images...
+[INFO] processed 1000/14034
+[INFO] processed 2000/14034
+[INFO] processed 3000/14034
+[INFO] processed 4000/14034
+[INFO] processed 5000/14034
+[INFO] processed 6000/14034
+[INFO] processed 7000/14034
+[INFO] processed 8000/14034
+[INFO] processed 9000/14034
+[INFO] processed 10000/14034
+[INFO] processed 11000/14034
+[INFO] processed 12000/14034
+[INFO] processed 13000/14034
+[INFO] processed 14000/14034
+Finished reading training images.
+Reading test images...
+[INFO] processed 1000/3000
+[INFO] processed 2000/3000
+Finished test training images.
+
+Running Principal Component Analysis algorithm to reduce data dimensionality (on pixel features)...
+[PCA tuning] Perfoming PCA tuning of the goal variance hyperparameter....
+[PCA tuning] Considering variance=0.6
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.6 explained variance is 8
+[myPCA] Classifier accuracy: 38.43%
+
+[PCA tuning] Considering variance=0.65
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.65 explained variance is 14
+[myPCA] Classifier accuracy: 41.77%
+
+[PCA tuning] Considering variance=0.7
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 26
+[myPCA] Classifier accuracy: 42.93%
+
+[PCA tuning] Considering variance=0.75
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.75 explained variance is 50
+[myPCA] Classifier accuracy: 41.60%
+
+[PCA tuning] Considering variance=0.8
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.8 explained variance is 98
+[myPCA] Classifier accuracy: 40.03%
+
+[PCA tuning] Considering variance=0.85
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.85 explained variance is 184
+[myPCA] Classifier accuracy: 36.47%
+
+[PCA tuning] Considering variance=0.9
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 328
+[myPCA] Classifier accuracy: 34.03%
+
+[PCA tuning] The best goal variance found was 0.7 with an accuracy of 42.93% (26 components were considered)
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 26
+[myPCA] Classifier accuracy: 42.93%
+
+Comparing (but not using) with sklearn PCA results...
+[sklearn PCA] PCA components considering the set variance ratio (0.7): 15
+
+Running Principal Component Analysis algorithm to reduce data dimensionality (on histogram features)...
+[PCA tuning] Perfoming PCA tuning of the goal variance hyperparameter....
+[PCA tuning] Considering variance=0.6
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.6 explained variance is 5
+[myPCA] Classifier accuracy: 32.83%
+
+[PCA tuning] Considering variance=0.65
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.65 explained variance is 6
+[myPCA] Classifier accuracy: 33.47%
+
+[PCA tuning] Considering variance=0.7
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 7
+[myPCA] Classifier accuracy: 34.17%
+
+[PCA tuning] Considering variance=0.75
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.75 explained variance is 9
+[myPCA] Classifier accuracy: 35.00%
+
+[PCA tuning] Considering variance=0.8
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.8 explained variance is 12
+[myPCA] Classifier accuracy: 35.97%
+
+[PCA tuning] Considering variance=0.85
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.85 explained variance is 16
+[myPCA] Classifier accuracy: 35.93%
+
+[PCA tuning] Considering variance=0.9
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 22
+[myPCA] Classifier accuracy: 37.50%
+
+[PCA tuning] The best goal variance found was 0.9 with an accuracy of 37.5% (22 components were considered)
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 22
+[myPCA] Classifier accuracy: 37.50%
+
+Comparing (but not using) with sklearn PCA results...
+[sklearn PCA] PCA components considering the set variance ratio (0.9): 19
+
+------------------------------------------------------------
+[KNN pixels tuning] Considering 10000 samples for training and 3000 for testing
+[KNN tuning] Considering euclidean distance metric and K=1...   | Achieved accuracy: 35.60% |
+[KNN tuning] Considering cosine distance metric and K=1...   | Achieved accuracy: 36.40% |
+[KNN tuning] Considering jaccard distance metric and K=1...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=1...   | Achieved accuracy: 33.10% |
+[KNN tuning] Considering euclidean distance metric and K=3...   | Achieved accuracy: 37.53% |
+[KNN tuning] Considering cosine distance metric and K=3...   | Achieved accuracy: 38.87% |
+[KNN tuning] Considering jaccard distance metric and K=3...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=3...   | Achieved accuracy: 33.97% |
+[KNN tuning] Considering euclidean distance metric and K=5...   | Achieved accuracy: 39.47% |
+[KNN tuning] Considering cosine distance metric and K=5...   | Achieved accuracy: 41.77% |
+[KNN tuning] Considering jaccard distance metric and K=5...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=5...   | Achieved accuracy: 36.73% |
+[KNN tuning] Considering euclidean distance metric and K=7...   | Achieved accuracy: 40.40% |
+[KNN tuning] Considering cosine distance metric and K=7...   | Achieved accuracy: 41.23% |
+[KNN tuning] Considering jaccard distance metric and K=7...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=7...   | Achieved accuracy: 37.07% |
+[KNN pixels tuning] The best hyperparameters found are: K=5; metric distance=cosine
+------------------------------------------------------------
+
+------------------------------------------------------------
+[KNN histograms tuning] Considering 10000 samples for training and 3000 for testing
+[KNN tuning] Considering euclidean distance metric and K=1...   | Achieved accuracy: 14.87% |
+[KNN tuning] Considering cosine distance metric and K=1...   | Achieved accuracy: 14.03% |
+[KNN tuning] Considering jaccard distance metric and K=1...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=1...   | Achieved accuracy: 16.43% |
+[KNN tuning] Considering euclidean distance metric and K=3...   | Achieved accuracy: 14.47% |
+[KNN tuning] Considering cosine distance metric and K=3...   | Achieved accuracy: 13.87% |
+[KNN tuning] Considering jaccard distance metric and K=3...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=3...   | Achieved accuracy: 17.00% |
+[KNN tuning] Considering euclidean distance metric and K=5...   | Achieved accuracy: 13.73% |
+[KNN tuning] Considering cosine distance metric and K=5...   | Achieved accuracy: 14.03% |
+[KNN tuning] Considering jaccard distance metric and K=5...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=5...   | Achieved accuracy: 16.23% |
+[KNN tuning] Considering euclidean distance metric and K=7...   | Achieved accuracy: 13.57% |
+[KNN tuning] Considering cosine distance metric and K=7...   | Achieved accuracy: 14.40% |
+[KNN tuning] Considering jaccard distance metric and K=7...   | Achieved accuracy: 15.80% |
+[KNN tuning] Considering mahalanobis distance metric and K=7...   | Achieved accuracy: 16.17% |
+[KNN histograms tuning] The best hyperparameters found are: K=3; metric distance=mahalanobis
+------------------------------------------------------------
+
+[my KNN] Considering rawPixels_bw pixels features...   | Achieved accuracy: 41.70% |
+[my KNN] Classification Report:
+               precision    recall  f1-score   support
+
+   buildings       0.30      0.26      0.28       437
+      forest       0.50      0.67      0.58       474
+     glacier       0.40      0.41      0.41       553
+    mountain       0.42      0.62      0.50       525
+         sea       0.33      0.23      0.27       510
+      street       0.51      0.29      0.37       501
+
+    accuracy                           0.42      3000
+   macro avg       0.41      0.41      0.40      3000
+weighted avg       0.41      0.42      0.40      3000
+
+precision = 0.411
+recall = 0.415
+fscore = 0.401
+support = None
+
+(3000,) (1, 3000)
+[my KNN] Considering histograms_bw as features...   | Achieved accuracy: 16.10% |
+[my KNN] Classification Report:
+               precision    recall  f1-score   support
+
+   buildings       0.15      0.38      0.21       437
+      forest       0.23      0.17      0.20       474
+     glacier       0.15      0.14      0.15       553
+    mountain       0.22      0.11      0.14       525
+         sea       0.12      0.05      0.07       510
+      street       0.13      0.16      0.14       501
+
+    accuracy                           0.16      3000
+   macro avg       0.17      0.17      0.15      3000
+weighted avg       0.17      0.16      0.15      3000
+
+precision = 0.168
+recall = 0.167
+fscore = 0.152
+support = None
+
+Reading training images...
+[INFO] processed 1000/14034
+[INFO] processed 2000/14034
+[INFO] processed 3000/14034
+[INFO] processed 4000/14034
+[INFO] processed 5000/14034
+[INFO] processed 6000/14034
+[INFO] processed 7000/14034
+[INFO] processed 8000/14034
+[INFO] processed 9000/14034
+[INFO] processed 10000/14034
+[INFO] processed 11000/14034
+[INFO] processed 12000/14034
+[INFO] processed 13000/14034
+[INFO] processed 14000/14034
+Finished reading training images.
+Reading test images...
+[INFO] processed 1000/3000
+[INFO] processed 2000/3000
+Finished test training images.
+
+Running Principal Component Analysis algorithm to reduce data dimensionality (on pixel features)...
+[PCA tuning] Perfoming PCA tuning of the goal variance hyperparameter....
+[PCA tuning] Considering variance=0.6
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.6 explained variance is 7
+[myPCA] Classifier accuracy: 39.40%
+
+[PCA tuning] Considering variance=0.65
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.65 explained variance is 12
+[myPCA] Classifier accuracy: 41.63%
+
+[PCA tuning] Considering variance=0.7
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 22
+[myPCA] Classifier accuracy: 44.90%
+
+[PCA tuning] Considering variance=0.75
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.75 explained variance is 44
+[myPCA] Classifier accuracy: 44.33%
+
+[PCA tuning] Considering variance=0.8
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.8 explained variance is 88
+[myPCA] Classifier accuracy: 41.67%
+
+[PCA tuning] Considering variance=0.85
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.85 explained variance is 172
+[myPCA] Classifier accuracy: 39.33%
+
+[PCA tuning] Considering variance=0.9
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 314
+[myPCA] Classifier accuracy: 35.97%
+
+[PCA tuning] The best goal variance found was 0.7 with an accuracy of 44.9% (22 components were considered)
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 22
+[myPCA] Classifier accuracy: 44.90%
+
+Comparing (but not using) with sklearn PCA results...
+[sklearn PCA] PCA components considering the set variance ratio (0.7): 12
+
+Running Principal Component Analysis algorithm to reduce data dimensionality (on histogram features)...
+[PCA tuning] Perfoming PCA tuning of the goal variance hyperparameter....
+[PCA tuning] Considering variance=0.6
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.6 explained variance is 0
+[myPCA] Classifier accuracy: 0.00%
+
+[PCA tuning] Considering variance=0.65
+C:\Users\fabio\PycharmProjects\ML_Project\KNN\my_pca.py:129: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  accuracy = np.sum(predicted == test_labels)
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.65 explained variance is 1
+[myPCA] Classifier accuracy: 23.50%
+
+[PCA tuning] Considering variance=0.7
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.7 explained variance is 2
+[myPCA] Classifier accuracy: 29.27%
+
+[PCA tuning] Considering variance=0.75
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.75 explained variance is 4
+[myPCA] Classifier accuracy: 36.83%
+
+[PCA tuning] Considering variance=0.8
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.8 explained variance is 6
+[myPCA] Classifier accuracy: 40.33%
+
+[PCA tuning] Considering variance=0.85
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.85 explained variance is 12
+[myPCA] Classifier accuracy: 43.83%
+
+[PCA tuning] Considering variance=0.9
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 22
+[myPCA] Classifier accuracy: 46.37%
+
+[PCA tuning] The best goal variance found was 0.9 with an accuracy of 46.37% (22 components were considered)
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 22
+[myPCA] Classifier accuracy: 46.37%
+
+Comparing (but not using) with sklearn PCA results...
+[sklearn PCA] PCA components considering the set variance ratio (0.9): 16
+
+------------------------------------------------------------
+[KNN pixels tuning] Considering 10000 samples for training and 3000 for testing
+[KNN tuning] Considering euclidean distance metric and K=1...   | Achieved accuracy: 37.13% |
+[KNN tuning] Considering cosine distance metric and K=1...   | Achieved accuracy: 37.47% |
+[KNN tuning] Considering jaccard distance metric and K=1...   | Achieved accuracy: 17.50% |
+[KNN tuning] Considering mahalanobis distance metric and K=1...   | Achieved accuracy: 36.00% |
+[KNN tuning] Considering euclidean distance metric and K=3...   | Achieved accuracy: 38.50% |
+[KNN tuning] Considering cosine distance metric and K=3...   | Achieved accuracy: 41.50% |
+[KNN tuning] Considering jaccard distance metric and K=3...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=3...   | Achieved accuracy: 37.20% |
+[KNN tuning] Considering euclidean distance metric and K=5...   | Achieved accuracy: 41.13% |
+[KNN tuning] Considering cosine distance metric and K=5...   | Achieved accuracy: 42.77% |
+[KNN tuning] Considering jaccard distance metric and K=5...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=5...   | Achieved accuracy: 39.20% |
+[KNN tuning] Considering euclidean distance metric and K=7...   | Achieved accuracy: 42.07% |
+[KNN tuning] Considering cosine distance metric and K=7...   | Achieved accuracy: 44.40% |
+[KNN tuning] Considering jaccard distance metric and K=7...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=7...   | Achieved accuracy: 39.27% |
+[KNN pixels tuning] The best hyperparameters found are: K=7; metric distance=cosine
+------------------------------------------------------------
+
+------------------------------------------------------------
+[KNN histograms tuning] Considering 10000 samples for training and 3000 for testing
+[KNN tuning] Considering euclidean distance metric and K=1...   | Achieved accuracy: 17.03% |
+[KNN tuning] Considering cosine distance metric and K=1...   | Achieved accuracy: 16.07% |
+[KNN tuning] Considering jaccard distance metric and K=1...   | Achieved accuracy: 18.43% |
+[KNN tuning] Considering mahalanobis distance metric and K=1...   | Achieved accuracy: 17.87% |
+[KNN tuning] Considering euclidean distance metric and K=3...   | Achieved accuracy: 17.00% |
+[KNN tuning] Considering cosine distance metric and K=3...   | Achieved accuracy: 15.87% |
+[KNN tuning] Considering jaccard distance metric and K=3...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=3...   | Achieved accuracy: 16.93% |
+[KNN tuning] Considering euclidean distance metric and K=5...   | Achieved accuracy: 18.50% |
+[KNN tuning] Considering cosine distance metric and K=5...   | Achieved accuracy: 16.40% |
+[KNN tuning] Considering jaccard distance metric and K=5...   | Achieved accuracy: 18.43% |
+[KNN tuning] Considering mahalanobis distance metric and K=5...   | Achieved accuracy: 18.90% |
+[KNN tuning] Considering euclidean distance metric and K=7...   | Achieved accuracy: 18.33% |
+[KNN tuning] Considering cosine distance metric and K=7...   | Achieved accuracy: 16.33% |
+[KNN tuning] Considering jaccard distance metric and K=7...   | Achieved accuracy: 14.57% |
+[KNN tuning] Considering mahalanobis distance metric and K=7...   | Achieved accuracy: 20.17% |
+[KNN histograms tuning] The best hyperparameters found are: K=7; metric distance=mahalanobis
+------------------------------------------------------------
+
+[my KNN] Considering meanPixels pixels features...   | Achieved accuracy: 45.37% |
+[my KNN] Classification Report:
+               precision    recall  f1-score   support
+
+   buildings       0.36      0.29      0.32       437
+      forest       0.54      0.77      0.64       474
+     glacier       0.44      0.45      0.44       553
+    mountain       0.43      0.66      0.52       525
+         sea       0.34      0.20      0.26       510
+      street       0.56      0.33      0.42       501
+
+    accuracy                           0.45      3000
+   macro avg       0.45      0.45      0.43      3000
+weighted avg       0.45      0.45      0.43      3000
+
+precision = 0.447
+recall = 0.452
+fscore = 0.434
+support = None
+
+(3000,) (1, 3000)
+[my KNN] Considering histograms_HSV as features...   | Achieved accuracy: 20.37% |
+[my KNN] Classification Report:
+               precision    recall  f1-score   support
+
+   buildings       0.16      0.24      0.19       437
+      forest       0.23      0.18      0.20       474
+     glacier       0.25      0.18      0.21       553
+    mountain       0.16      0.16      0.16       525
+         sea       0.21      0.15      0.17       510
+      street       0.24      0.32      0.27       501
+
+    accuracy                           0.20      3000
+   macro avg       0.21      0.21      0.20      3000
+weighted avg       0.21      0.20      0.20      3000
+
+precision = 0.208
+recall = 0.205
+fscore = 0.202
+support = None
+
+
+Process finished with exit code 0
