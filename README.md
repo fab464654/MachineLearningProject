@@ -6,7 +6,6 @@ Academic year:  2021-2022
 Authors: Michele Sandrini, Fabio Castellini
 
 Title: 
-SOLVING A CLASSIFICATION THROUGH SUPERVISED LEARNING:
 Implementation and comparison of different Machine Learning and Deep Learning techniques to classify 6 classes of images
 
 
