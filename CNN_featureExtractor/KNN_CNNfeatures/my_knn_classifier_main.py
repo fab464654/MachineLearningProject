@@ -102,7 +102,6 @@ def knn_classfication_pipeline(csvTrainPath, csvTestPath):
         print("precision = {:.3f}\nrecall = {:.3f}\nfscore = {:.3f}\nsupport = {}\n".format(precision, recall, fscore, support))
 
     confusionMatrix = confusion_matrix(testLabels, np.transpose(prediction))
-    print(testLabels.shape, prediction.shape)
 
     #df_cm = pd.DataFrame(confusionMatrix, index=[i for i in classNames], columns=[i for i in classNames])
     if showConfusionMatrix:
