@@ -1,0 +1,33 @@
+[myPCA] From PCA (implemented step by step) we get that the number of components to have 0.9 explained variance is 137
+[myPCA] Classifier accuracy: 88.67%
+
+
+Multiclass Support Vector Classification on 'NatureDataset': Confusion matrix (CNN features)
+======================================================================================================
+[  rbf  ]: accuracy = 0.77, precision = 0.76, recall = 0.76
+[ poly  ]: accuracy = 0.77, precision = 0.76, recall = 0.76
+[sigmoid]: accuracy = 0.59, precision = 0.58, recall = 0.58
+[linear ]: accuracy = 0.69, precision = 0.69, recall = 0.69 (NO CONVERGENCE, # max iterations = 10000)
+======================================================================================================
+
+
+The best kernel was:  poly
+Classification Report:
+               precision    recall  f1-score   support
+
+   buildings       0.53      0.33      0.41       437
+      forest       0.99      0.99      0.99       474
+    glaciers       0.81      0.69      0.75       553
+    mountain       0.76      0.86      0.81       525
+         sea       0.89      0.93      0.91       510
+      street       0.59      0.77      0.67       501
+
+    accuracy                           0.77      3000
+   macro avg       0.76      0.76      0.75      3000
+weighted avg       0.77      0.77      0.76      3000
+
+precision = 0.762
+recall = 0.761
+fscore = 0.754
+support =None
+
