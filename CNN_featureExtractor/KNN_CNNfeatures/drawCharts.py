@@ -128,6 +128,6 @@ labels = ['Euclidean distance metric', 'Cosine distance metric', 'Jaccard distan
 title = '[KNN tuning] CNN extracted features'
 plotLabelX = 'K value'
 plotLabelY = 'KNN classifier accuracy [%]'
-create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.iloc[2], dataY_4=df.iloc[3], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
+create_4bars_chart(rangeX, dataY_1=df['1'], dataY_2=df['3'], dataY_3=df['5'], dataY_4=df['7'], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
 #--------------------------------------------------------------------------------------------------------------
 
