@@ -2,7 +2,8 @@
 from sklearn.neighbors import KNeighborsClassifier
 from imutils import paths
 import numpy as np
-from sklearn.metrics import confusion_matrix, classification_report, precision_recall_fscore_support
+from sklearn.metrics import confusion_matrix, classification_report, precision_recall_fscore_support, \
+    ConfusionMatrixDisplay
 import seaborn as sn
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -163,17 +164,17 @@ def knn_classfication_pipeline(histogramType, pixelType):
         print("precision = {:.3f}\nrecall = {:.3f}\nfscore = {:.3f}\nsupport = {}\n".format(precision, recall, fscore, support))
 
     confusionMatrix = confusion_matrix(testLabels, np.transpose(prediction))
-    print(testLabels.shape, prediction.shape)
-
-    df_cm = pd.DataFrame(confusionMatrix, index=[i for i in classNames], columns=[i for i in classNames])
 
     if showConfusionMatrix:
-        plt.figure(figsize=(10, 7))
-        sn.heatmap(df_cm, annot=True)
+        disp = ConfusionMatrixDisplay(confusion_matrix=confusionMatrix, display_labels=classNames)
+        fig, ax = plt.subplots(figsize=(12, 8))
+        font = {'size': 17}
+        plt.rc('font', **font)
+        disp.plot(ax=ax, cmap="magma")
         plt.title("Confusion matrix: " + pixelType + "; K=" + str(K_best_pixels) + "; dist=" + distance_best_pixels, fontweight='bold')
-        plt.tight_layout()
         plt.savefig(savingPath + "confusionMatrix_" + pixelType + "_KNN_best.jpg", dpi=300)
-        plt.show()
+        plt.close(disp.figure_)
+
 
     #-------------------------------------------------------------------------#
     print("[my KNN] Considering " + histogramType + " as features...", end="")
@@ -202,15 +203,17 @@ def knn_classfication_pipeline(histogramType, pixelType):
                                                                                             support))
 
     confusionMatrix = confusion_matrix(testLabels, np.transpose(prediction))
-    df_cm = pd.DataFrame(confusionMatrix, index=[i for i in classNames], columns=[i for i in classNames])
 
     if showConfusionMatrix:
-        plt.figure(figsize=(10, 7))
-        sn.heatmap(df_cm, annot=True)
+        disp = ConfusionMatrixDisplay(confusion_matrix=confusionMatrix, display_labels=classNames)
+        fig, ax = plt.subplots(figsize=(12, 8))
+        font = {'size': 17}
+        plt.rc('font', **font)
+        disp.plot(ax=ax, cmap="magma")
         plt.title("Confusion matrix: " + histogramType + "; K=" + str(K_best_hist) + "; dist=" + distance_best_hist, fontweight='bold')
-        plt.tight_layout()
         plt.savefig(savingPath + "confusionMatrix_" + histogramType + "_KNN_best.jpg", dpi=300)
-        plt.show()
+        plt.close(disp.figure_)
+
 
     """
     #------------- Using the sklearn code to compare results ------------------#

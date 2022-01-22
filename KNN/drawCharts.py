@@ -165,9 +165,9 @@ create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.il
 #--------------------------------------------------------------------------------------------------------------
 #Create the pixels PCA tuning plot
 #--------------------------------------------------------------------------------------------------------------
-df_1 = pd.read_csv('previouslySavedLogs/PCA_accuracy_rawPixels_bw.csv')
-df_2 = pd.read_csv('previouslySavedLogs/PCA_accuracy_rawPixels_RGB.csv')
-df_3 = pd.read_csv('previouslySavedLogs/PCA_accuracy_meanPixels.csv')
+df_1 = pd.read_csv('csvLogs/PCA_accuracy_rawPixels_bw.csv')
+df_2 = pd.read_csv('csvLogs/PCA_accuracy_rawPixels_RGB.csv')
+df_3 = pd.read_csv('csvLogs/PCA_accuracy_meanPixels.csv')
 savingName = "images/PCA_tuning_pixels.jpg"
 
 rangeX = [str(i / 100) for i in range(60, 95, 5)]  # list = [0.6, ..., 0.9]
@@ -183,9 +183,9 @@ create_3bars_chart(rangeX, dataY_1=df_1.iloc[0], dataY_2=df_2.iloc[0], dataY_3=d
 #--------------------------------------------------------------------------------------------------------------
 #Create the histograms PCA tuning plot
 #--------------------------------------------------------------------------------------------------------------
-df_1 = pd.read_csv('previouslySavedLogs/PCA_accuracy_histograms_bw.csv')
-df_2 = pd.read_csv('previouslySavedLogs/PCA_accuracy_histograms_RGB.csv')
-df_3 = pd.read_csv('previouslySavedLogs/PCA_accuracy_histograms_HSV.csv')
+df_1 = pd.read_csv('csvLogs/PCA_accuracy_histograms_bw.csv')
+df_2 = pd.read_csv('csvLogs/PCA_accuracy_histograms_RGB.csv')
+df_3 = pd.read_csv('csvLogs/PCA_accuracy_histograms_HSV.csv')
 savingName = "images/PCA_tuning_histograms.jpg"
 
 rangeX = [str(i / 100) for i in range(60, 95, 5)]  # list = [0.6, ..., 0.9]
@@ -200,7 +200,7 @@ create_3bars_chart(rangeX, dataY_1=df_1.iloc[0], dataY_2=df_2.iloc[0], dataY_3=d
 #--------------------------------------------------------------------------------------------------------------
 #Create KNN tuning pixel bw features plot
 #--------------------------------------------------------------------------------------------------------------
-df = pd.read_csv('previouslySavedLogs/K_accuracy_rawPixels_bw.csv')
+df = pd.read_csv('csvLogs/K_accuracy_rawPixels_bw.csv')
 savingName = "images/KNN_tuning_pixels_BW.jpg"
 
 rangeX = ['1', '3', '5', '7']
@@ -208,7 +208,8 @@ labels = ['Euclidean distance metric', 'Cosine distance metric', 'Jaccard distan
 title = '[KNN tuning] Raw pixels BW features'
 plotLabelX = 'K value'
 plotLabelY = 'KNN classifier accuracy [%]'
-create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.iloc[2], dataY_4=df.iloc[3], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
+
+create_4bars_chart(rangeX, dataY_1=df['1'], dataY_2=df['3'], dataY_3=df['5'], dataY_4=df['7'], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
 #--------------------------------------------------------------------------------------------------------------
 
 
@@ -216,30 +217,30 @@ create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.il
 #--------------------------------------------------------------------------------------------------------------
 #Create KNN tuning histograms bw features plot
 #--------------------------------------------------------------------------------------------------------------
-df = pd.read_csv('previouslySavedLogs/K_accuracy_histograms_bw.csv')
+df = pd.read_csv('csvLogs/K_accuracy_histograms_bw.csv')
 savingName = "images/KNN_tuning_histograms_BW.jpg"
 title = '[KNN tuning] Histogram (b&w) features'
-create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.iloc[2], dataY_4=df.iloc[3], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
+create_4bars_chart(rangeX, dataY_1=df['1'], dataY_2=df['3'], dataY_3=df['5'], dataY_4=df['7'], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
 #--------------------------------------------------------------------------------------------------------------
 
 
 #--------------------------------------------------------------------------------------------------------------
 #Create KNN tuning pixels RGB features plot
 #--------------------------------------------------------------------------------------------------------------
-df = pd.read_csv('previouslySavedLogs/K_accuracy_rawPixels_RGB.csv')
+df = pd.read_csv('csvLogs/K_accuracy_rawPixels_RGB.csv')
 savingName = "images/KNN_tuning_pixels_RGB.jpg"
 title = '[KNN tuning] Raw pixel RGB features'
-create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.iloc[2], dataY_4=df.iloc[3], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
+create_4bars_chart(rangeX, dataY_1=df['1'], dataY_2=df['3'], dataY_3=df['5'], dataY_4=df['7'], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
 #--------------------------------------------------------------------------------------------------------------
 
 
 #--------------------------------------------------------------------------------------------------------------
 #Create KNN tuning histograms RGB features plot
 #--------------------------------------------------------------------------------------------------------------
-df = pd.read_csv('previouslySavedLogs/K_accuracy_histograms_RGB.csv')
+df = pd.read_csv('csvLogs/K_accuracy_histograms_RGB.csv')
 savingName = "images/KNN_tuning_histograms_RGB.jpg"
 title = '[KNN tuning] Histogram (RGB) features'
-create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.iloc[2], dataY_4=df.iloc[3], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
+create_4bars_chart(rangeX, dataY_1=df['1'], dataY_2=df['3'], dataY_3=df['5'], dataY_4=df['7'], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
 #--------------------------------------------------------------------------------------------------------------
 
 
@@ -248,20 +249,20 @@ create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.il
 #--------------------------------------------------------------------------------------------------------------
 #Create KNN tuning histograms HSV features plot
 #--------------------------------------------------------------------------------------------------------------
-df = pd.read_csv('previouslySavedLogs/K_accuracy_histograms_HSV.csv')
+df = pd.read_csv('csvLogs/K_accuracy_histograms_HSV.csv')
 savingName = "images/KNN_tuning_histograms_HSV.jpg"
 title = '[KNN tuning] Histogram (HSV) features'
-create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.iloc[2], dataY_4=df.iloc[3], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
+create_4bars_chart(rangeX, dataY_1=df['1'], dataY_2=df['3'], dataY_3=df['5'], dataY_4=df['7'], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
 #--------------------------------------------------------------------------------------------------------------
 
 
 #--------------------------------------------------------------------------------------------------------------
 #Create KNN tuning mean pixels features plot
 #--------------------------------------------------------------------------------------------------------------
-df = pd.read_csv('previouslySavedLogs/K_accuracy_meanPixels.csv')
+df = pd.read_csv('csvLogs/K_accuracy_meanPixels.csv')
 savingName = "images/KNN_tuning_pixels_MEAN.jpg"
 title = '[KNN tuning] Mean pixel features'
-create_4bars_chart(rangeX, dataY_1=df.iloc[0], dataY_2=df.iloc[1], dataY_3=df.iloc[2], dataY_4=df.iloc[3], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
+create_4bars_chart(rangeX, dataY_1=df['1'], dataY_2=df['3'], dataY_3=df['5'], dataY_4=df['7'], labelsY=labels, savingName=savingName, title=title, plotLabelX=plotLabelX, plotLabelY=plotLabelY)
 #--------------------------------------------------------------------------------------------------------------
 
 
