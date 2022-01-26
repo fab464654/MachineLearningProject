@@ -16,4 +16,4 @@ This repository contains the implementation of
 - 2 Deep Learning neural networks (ResNet18 & VGG16)
 - A "mixed" pipeline in which a ResNet18 was used as a feature extractor and then the SVM and KNN algorithms were applied to look for improvements
 
-to perform image classification of a Nature Scenes Dataset.
+to perform image classification of a Nature Scenes Dataset (https://www.kaggle.com/puneet6060/intel-image-classification).
