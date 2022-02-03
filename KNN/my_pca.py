@@ -22,7 +22,7 @@ def my_pca(data, img_w, img_h, train_labels, test_data, test_labels, training_ph
     # 3b. I calculate the covariance matrix
     C = np.cov(Xc)
 
-    # 3c. Extracting eigenvectors (eigenfaces) and eigenvalues of the covariance matrix
+    # 3c. Extracting eigenvectors and eigenvalues of the covariance matrix
     lambdas, U = np.linalg.eigh(C)
 
     # 3d. I order the eigenvalues from largest to smallest
