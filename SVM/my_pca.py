@@ -121,27 +121,27 @@ def test_my_pca(first_N_eigenvectors, projected_images, train_labels, test_data,
     # 8. Calculation xi for classification
     xi = np.linalg.norm(g - x_te, ord=2, axis=0)
 
-    # 9. In which of the 3 cases are we for each test face? Is the corresponding face of the same person? Check the first 5 faces
+    # 9. In which of the 3 cases are we for each test image? Is the corresponding image of the same class? Check the first 5 images
     ''' # It does not work in our case, because Xc variable is defined out of scope of this function
     fig, axs = plt.subplots(5, 2)
     for i in range(5):
         if xi[i] >= theta:
-            print(str(i + 1) + ": It's not a face!")
+            print(str(i + 1) + ": It's not one of the classes!")
         elif xi[i] < theta and any(epsilon[i, :] > theta):
-            print(str(i + 1) + ": It's a new face!")
+            print(str(i + 1) + ": It's a new image of one of the classes!")
         elif xi[i] < theta and np.min(epsilon[i, :]) < theta:
-            print(str(i + 1) + ": It's a familiar face! I'll show you!")
+            print(str(i + 1) + ": It's a familiar image! I'll show you!")
             matched_indx = np.argmin(epsilon[i, :])
             axs[i, 0].imshow(x_te[:, i].reshape((r, c)), cmap='gray')
             axs[i, 1].imshow(Xc[:, matched_indx].reshape((r, c)), cmap='gray')
             if i == 0:
-                axs[i, 0].set_title('Unknown face!')
-                axs[i, 1].set_title('Known face!')
+                axs[i, 0].set_title('Unknown class!')
+                axs[i, 1].set_title('Known class!')
     plt.show()
     '''
 
     # 10. Calculate the accuracy of the classifier and test how the result changes when N (+/- eigenvectors) is changed
-    # Set the prediction equal to -1 in case of classification as no face or new face,
+    # Set the prediction equal to -1 in case of classification as no one of the classes or new image of one of the 6 classes,
     # equal to the train sample label with lower epsilon if a match is found
     predicted = []
     for i in range(test_data.shape[1]):
