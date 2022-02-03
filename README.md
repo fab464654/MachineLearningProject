@@ -1,7 +1,7 @@
 # Machine Learning Project
  Project of Machine Learning & AI
 
-Academic year:  2021-2022
+Academic year:  2020-2021
 
 Authors: Michele Sandrini, Fabio Castellini
 
